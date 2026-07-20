@@ -1,4 +1,4 @@
-package Arrays.SlidingWindow;
+package Arrays.SlidingWindow.Fixed;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Max_sum_subarray_of_size_k {
             arr[i] = sc.nextInt();
         }
         int k = sc.nextInt();
-        System.out.println(max_subarray_sum(arr, k));
+        System.out.println(min_subarray_sum(arr, k));
     }
 
     public static int max_subarray_sum(int[] arr, int k) {
@@ -31,4 +31,22 @@ public class Max_sum_subarray_of_size_k {
         }
         return max;
     }
+    public static int min_subarray_sum(int[] arr, int k) {
+        int i = 0, j = 0;
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+        while (j < arr.length) {
+            sum += arr[j];
+            if (j - i + 1 < k) {
+                j++;
+            } else {
+                min = Math.min(min, sum);
+                sum -= arr[i];
+                i++;
+                j++;
+            }
+        }
+        return min;
+    }
+
 }
