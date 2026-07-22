@@ -3,6 +3,13 @@ package Striver_Blind_75_LeetCode_Problems.LinkedList;
 import java.lang.classfile.components.ClassPrinter;
 
 public class Detect_a_loop_in_LL {
+    static class ListNode{
+        int val;
+        ListNode next;
+        ListNode(int val){
+            this.val=val;
+        }
+    }
     public boolean hasCycle(ListNode head){
         ListNode slow=head;
         ListNode fast=head;
@@ -14,6 +21,6 @@ public class Detect_a_loop_in_LL {
                 return true;
             }
         }
-        return slow;
+        return false;
     }
 }
