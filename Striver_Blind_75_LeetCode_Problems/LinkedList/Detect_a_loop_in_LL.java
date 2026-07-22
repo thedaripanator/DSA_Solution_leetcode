@@ -1,6 +1,5 @@
 package Striver_Blind_75_LeetCode_Problems.LinkedList;
 
-import java.lang.classfile.components.ClassPrinter;
 
 public class Detect_a_loop_in_LL {
     static class ListNode{
