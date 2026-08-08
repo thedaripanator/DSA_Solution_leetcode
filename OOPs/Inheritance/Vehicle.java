@@ -1,16 +1,11 @@
 package OOPs.Inheritance;
 
 public class Vehicle {
-    public void start(){
-        System.out.println("Starting..");
+    public Vehicle(String type) {
+        System.out.println("Vehicle Constructor called"+type);
     }
-    public void accelerate(){
-        System.out.println("Accelerating...");
-    }
-    public void turnLeft(){
-        System.out.println("Turning left..");
-    }
-    public void turnRight(){
-        System.out.println("Turning Right");
+
+    public Vehicle(){
+        System.out.println("Non Parametrised Vehicle Constructor called...");
     }
 }
